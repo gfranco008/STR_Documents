@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belair Stay Guest Guidebook</title>
+  <style>
+    :root {
+      --ink: #202124;
+      --muted: #60646c;
+      --cream: #f8f5ef;
+      --sand: #e7d8c5;
+      --taupe: #b99876;
+      --charcoal: #263238;
+      --soft: #fbfaf7;
+      --line: #e7e1d8;
+      --green: #4f6f52;
+      --gold: #b78942;
+      --red: #a34335;
+    }
+
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10.7pt;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      background: white;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal), #111817);
+      color: white;
+      padding: 42px 46px;
+      border-radius: 0 0 26px 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      background: rgba(231, 216, 197, 0.16);
+    }
+
+    .eyebrow {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 9pt;
+      color: var(--sand);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 31pt;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      max-width: 620px;
+      color: #f1eee9;
+      font-size: 12pt;
+    }
+
+    .intro {
+      margin: 28px 0 24px;
+      padding: 22px 26px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      color: #333;
+    }
+
+    .container {
+      padding: 0 22px 30px;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .quick-card {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 17px;
+    }
+
+    .quick-card .label {
+      color: var(--muted);
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px;
+    }
+
+    .quick-card .value {
+      font-weight: 700;
+      color: var(--charcoal);
+      font-size: 13pt;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 22px;
+      break-inside: avoid;
+      box-shadow: 0 10px 30px rgba(38, 50, 56, 0.05);
+    }
+
+    section.full {
+      grid-column: 1 / -1;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 15pt;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 9px;
+    }
+
+    h3 {
+      margin: 15px 0 6px;
+      color: var(--green);
+      font-size: 11.5pt;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .wifi {
+      margin-top: 12px;
+      background: #eef5ef;
+      border: 1px solid #c9dcc9;
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .wifi strong {
+      color: var(--green);
+    }
+
+    .note {
+      background: #fff8e8;
+      border-left: 4px solid var(--gold);
+      padding: 11px 14px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+
+    .danger {
+      background: #fff1ee;
+      border-left-color: var(--red);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 9.7pt;
+    }
+
+    .footer {
+      margin-top: 26px;
+      padding: 24px;
+      background: var(--charcoal);
+      color: white;
+      border-radius: 22px 22px 0 0;
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 6px 0;
+    }
+
+    .signature {
+      color: var(--sand);
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    @media print {
+      body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .page {
+        max-width: none;
+      }
+
+      .hero, .footer {
+        border-radius: 0;
+      }
+
+      section {
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .quick-info,
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 32px 24px;
+      }
+
+      .container {
+        padding: 0 14px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">Guest Guidebook</div>
+      <h1>Welcome to Belair Stay</h1>
+      <p class="subtitle">A clean, comfortable, and thoughtfully prepared home base in Augusta, Georgia.</p>
+    </header>
+
+    <div class="container">
+      <div class="intro">
+        Hi and welcome! We’re glad you’re here and hope you have a comfortable, relaxing stay. This home was designed to be clean, simple, and easy to settle into. If you need anything at all, I’m always just a message away.
+      </div>
+
+      <div class="quick-info">
+        <div class="quick-card">
+          <div class="label">Check-In</div>
+          <div class="value">3:00 PM</div>
+        </div>
+        <div class="quick-card">
+          <div class="label">Check-Out</div>
+          <div class="value">Before 11:00 AM</div>
+        </div>
+        <div class="quick-card">
+          <div class="label">Max Guests</div>
+          <div class="value">4 Guests</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <section>
+          <h2>📋 Arrival</h2>
+          <p><strong>Door access:</strong> Smart lock at the front door. Your code will be provided before arrival.</p>
+          <p><strong>Parking:</strong> Driveway parking is available. Please avoid blocking sidewalks or neighbors.</p>
+
+          <div class="wifi">
+            <p><strong>📶 WiFi</strong></p>
+            <p>WiFi details are also available via QR codes throughout the home.</p>
+            <p><strong>Network:</strong> Gustavo<br />
+            <strong>Password:</strong> Gustavo12345</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>🚪 Check-Out</h2>
+          <p>We just ask for a few quick things before you head out:</p>
+          <ul>
+            <li>Place all used towels and sheets on the floor</li>
+            <li>Load and start the dishwasher, if used</li>
+            <li>Take out trash to designated bins</li>
+            <li>Return any moved furniture or items to their original place</li>
+            <li>Turn off lights and adjust thermostat</li>
+            <li>Lock all doors and windows</li>
+            <li>Log out of any streaming accounts you used</li>
+          </ul>
+          <p class="muted">Late check-out may be available upon request. Please ask in advance.</p>
+        </section>
+
+        <section class="full">
+          <h2>🏡 House Rules</h2>
+          <ul>
+            <li>No smoking inside the property</li>
+            <li>No parties, events, or gatherings</li>
+            <li>Maximum occupancy is 4 guests</li>
+            <li>Dogs are allowed, but not permitted on beds or couches</li>
+            <li>Please clean up after your animals, inside and outside</li>
+            <li>Only registered guests are allowed unless approved</li>
+            <li>Please respect neighbors and the property</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🛋️ Living Room</h2>
+          <p>Relax on the sofa and enjoy the TV. Streaming apps are available, and you’re welcome to use your own accounts.</p>
+          <p>Please remember to log out before check-out.</p>
+        </section>
+
+        <section>
+          <h2>🍽️ Kitchen</h2>
+          <p>The kitchen is fully available for your use and includes cookware, utensils, oil, salt, pepper, coffee, and paper towels.</p>
+          <p><strong>Pantry:</strong> Feel free to use anything in the pantry.</p>
+          <p><strong>Alcohol:</strong> You are welcome to enjoy the selection. Please replace any bottles you finish.</p>
+          <h3>☕ Espresso Maker</h3>
+          <p>There’s nothing better than a morning espresso. Fill the stovetop espresso maker with water, add coffee grounds, brew on the stove, and clean after use.</p>
+        </section>
+
+        <section>
+          <h2>🛏️ Bedrooms</h2>
+          <p>Each bedroom is set up with fresh bedding and pillows. Extra pillows and blankets are available in the closet.</p>
+          <p>Curtains or blackout shades are provided to help you get a good night’s rest.</p>
+        </section>
+
+        <section>
+          <h2>🛁 Bathrooms</h2>
+          <p>Fresh towels are provided for your stay. Basic toiletries may be available for convenience.</p>
+          <p>Please do not flush anything other than toilet paper.</p>
+        </section>
+
+        <section>
+          <h2>🌡️ Thermostat</h2>
+          <p>The thermostat is located in the living room on the main wall.</p>
+          <ul>
+            <li><strong>Cooling:</strong> 70–74°F</li>
+            <li><strong>Heating:</strong> 68–72°F</li>
+          </ul>
+          <p class="muted">Please avoid extreme settings.</p>
+        </section>
+
+        <section>
+          <h2>🗑️ Trash</h2>
+          <p>Trash bins are located on the side of the house. Please bag all trash before placing it in the bins.</p>
+          <div class="note">
+            <strong>Sunday stay?</strong> Please roll the bins out to the sidewalk for pickup.
+          </div>
+        </section>
+
+        <section>
+          <h2>ℹ️ Good to Know</h2>
+          <ul>
+            <li>Some smoke detectors may be sensitive. Please avoid excessive smoke when cooking.</li>
+            <li>There is no laundry available at the property.</li>
+            <li>If anything seems unclear or not working as expected, please reach out.</li>
+          </ul>
+        </section>
+
+        <section class="full">
+          <h2>🔥 Safety & Emergencies</h2>
+          <p><strong>Fire extinguisher:</strong> Kitchen area</p>
+          <p><strong>Smoke detectors:</strong> Throughout the home</p>
+          <p><strong>Emergency number:</strong> 911</p>
+          <div class="note danger">
+            <strong>Nearest hospital:</strong><br />
+            Augusta University Medical Center<br />
+            1120 15th St, Augusta, GA
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <p><strong>Host: Gustavo</strong></p>
+        <p>If you need anything during your stay, please reach out through Airbnb. I’m always happy to help.</p>
+        <p>If you're enjoying your stay, we’d truly appreciate a review on Airbnb. It makes a big difference for us as hosts.</p>
+        <p class="signature">Enjoy your stay and welcome to Augusta! — Gustavo</p>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
