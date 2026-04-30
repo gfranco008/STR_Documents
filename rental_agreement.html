@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belair Stay Short-Term Rental Agreement</title>
+  <style>
+    :root {
+      --ink: #202124;
+      --muted: #5f6368;
+      --cream: #f8f5ef;
+      --sand: #e7d8c5;
+      --taupe: #a9825f;
+      --charcoal: #263238;
+      --line: #e7e1d8;
+      --soft: #fbfaf7;
+      --red: #9f3f32;
+    }
+
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.55;
+      font-size: 10.5pt;
+    }
+
+    .document {
+      max-width: 920px;
+      margin: 0 auto;
+      background: white;
+    }
+
+    .cover {
+      background: linear-gradient(135deg, #111817, var(--charcoal));
+      color: #fff;
+      padding: 44px 48px 38px;
+      border-bottom: 7px solid var(--taupe);
+    }
+
+    .eyebrow {
+      color: var(--sand);
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28pt;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+    }
+
+    .cover p {
+      margin: 14px 0 0;
+      color: #f4eee7;
+      max-width: 700px;
+      font-size: 11.5pt;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 20px 26px;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .meta-card .label {
+      color: var(--muted);
+      font-size: 8.8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px;
+    }
+
+    .meta-card .value {
+      color: var(--charcoal);
+      font-weight: 700;
+      font-size: 12pt;
+    }
+
+    .content {
+      padding: 28px 32px 34px;
+    }
+
+    .notice {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--taupe);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+    }
+
+    section {
+      padding: 16px 0 15px;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      color: var(--charcoal);
+      font-size: 14pt;
+    }
+
+    p {
+      margin: 7px 0;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .strict {
+      background: #fff4f1;
+      border: 1px solid #efd0ca;
+      border-left: 5px solid var(--red);
+      border-radius: 14px;
+      padding: 15px 18px;
+      margin-top: 10px;
+    }
+
+    .signature-box {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .sig {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      min-height: 96px;
+      background: var(--soft);
+    }
+
+    .sig-line {
+      margin-top: 32px;
+      border-top: 1px solid #9a9a9a;
+      padding-top: 7px;
+      color: var(--muted);
+      font-size: 9.5pt;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding: 20px;
+      background: var(--charcoal);
+      color: white;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 4px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    @media print {
+      body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .document {
+        max-width: none;
+      }
+
+      .cover {
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .meta,
+      .signature-box {
+        grid-template-columns: 1fr;
+      }
+
+      .cover {
+        padding: 34px 24px;
+      }
+
+      .content {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="document">
+    <header class="cover">
+      <div class="eyebrow">Short-Term Rental Agreement</div>
+      <h1>Belair Stay — Augusta, GA</h1>
+      <p>This agreement is designed to protect the property, preserve the guest experience, and set clear expectations for every stay.</p>
+    </header>
+
+    <div class="meta">
+      <div class="meta-card">
+        <div class="label">Check-In</div>
+        <div class="value">3:00 PM</div>
+      </div>
+      <div class="meta-card">
+        <div class="label">Check-Out</div>
+        <div class="value">Before 11:00 AM</div>
+      </div>
+      <div class="meta-card">
+        <div class="label">Max Occupancy</div>
+        <div class="value">4 Guests</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="notice">
+        This Short-Term Rental Agreement (“Agreement”) is entered into between <strong>Gustavo (“Host”)</strong> and the <strong>Guest (“Renter”)</strong> as of the reservation date confirmed through Airbnb or an authorized booking platform. By completing a reservation, submitting payment, and/or occupying the property, Guest agrees to all terms outlined below.
+      </div>
+
+      <section>
+        <h2>1. Property</h2>
+        <p>The property (“Property”) is located in Augusta, Georgia and is provided exclusively for short-term residential lodging.</p>
+      </section>
+
+      <section>
+        <h2>2. Term of Stay</h2>
+        <p><strong>Check-in:</strong> 3:00 PM</p>
+        <p><strong>Check-out:</strong> Before 11:00 AM</p>
+        <p>Unauthorized late check-out may result in additional fees, including but not limited to extended cleaning charges or costs caused by impact to the next reservation.</p>
+      </section>
+
+      <section>
+        <h2>3. Occupancy & Guests</h2>
+        <p>Maximum occupancy is <strong>4 guests</strong>. Only registered guests are permitted on the property unless prior written approval is provided by Host.</p>
+        <p>Unauthorized guests may result in immediate termination of the stay without refund.</p>
+      </section>
+
+      <section>
+        <h2>4. Payments, Fees & Platform</h2>
+        <p>All payments, fees, deposits, and applicable taxes are processed through the booking platform or other authorized reservation channel.</p>
+        <p>This property is professionally managed using <strong>Hospitable</strong>, which may be used for guest communication, automation, reservation support, and operational management.</p>
+      </section>
+
+      <section>
+        <h2>5. Security, Damages & Additional Charges</h2>
+        <p>Guest is fully responsible for any damage, loss, excessive cleaning, or excessive wear caused during the stay, including but not limited to:</p>
+        <ul>
+          <li>Damage to furniture, appliances, walls, flooring, fixtures, linens, or décor</li>
+          <li>Missing or damaged household items</li>
+          <li>Excessive cleaning, including pet-related cleaning</li>
+          <li>Smoking remediation or odor removal</li>
+          <li>Costs caused by unauthorized late check-out or rule violations</li>
+        </ul>
+        <p>All charges will be documented and submitted through the booking platform when applicable.</p>
+      </section>
+
+      <section>
+        <h2>6. House Rules</h2>
+        <div class="strict">
+          <p><strong>Guest agrees to follow the rules below. Violations may result in immediate termination of stay without refund and additional charges.</strong></p>
+          <ul>
+            <li>No smoking inside the property</li>
+            <li>No parties, events, gatherings, or disruptive behavior</li>
+            <li>Maximum occupancy of 4 guests at all times</li>
+            <li>Dogs are allowed, but are not permitted on beds or couches</li>
+            <li>Guest must clean up after pets, both inside and outside</li>
+            <li>No unregistered guests without prior approval</li>
+            <li>Respect neighbors and maintain reasonable noise levels</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>7. Use of Property</h2>
+        <p>The property is intended for residential lodging only. Commercial activity, event hosting, illegal activity, or unsafe conduct is strictly prohibited.</p>
+      </section>
+
+      <section>
+        <h2>8. Property Condition & Care</h2>
+        <p>Guest agrees to maintain the property in a clean and orderly condition, use appliances and furnishings responsibly, and promptly report any damage, malfunction, or safety concern to Host.</p>
+      </section>
+
+      <section>
+        <h2>9. Surveillance & Security Disclosure</h2>
+        <p>For the safety and security of guests and the property, exterior security cameras may be in use and may be positioned at entry points and/or outdoor areas.</p>
+        <p><strong>No cameras are located inside the home or in private areas.</strong></p>
+        <p>By booking, Guest acknowledges and consents to the presence of exterior monitoring devices.</p>
+      </section>
+
+      <section>
+        <h2>10. Liability Waiver</h2>
+        <p>Guest acknowledges that use of the property is at their own risk. Host is not responsible for personal injury, accidents, loss, theft, or damage to personal belongings, except where prohibited by applicable law.</p>
+      </section>
+
+      <section>
+        <h2>11. Indemnification</h2>
+        <p>Guest agrees to indemnify and hold harmless Host from claims, damages, losses, liabilities, costs, or expenses arising from Guest’s use of the property, violation of this Agreement, or actions of Guest’s invitees, pets, or unauthorized visitors.</p>
+      </section>
+
+      <section>
+        <h2>12. Right of Entry</h2>
+        <p>Host reserves the right to access the property for maintenance, inspection, safety, or emergency purposes, with reasonable notice when possible.</p>
+      </section>
+
+      <section>
+        <h2>13. Termination</h2>
+        <p>Host reserves the right to terminate this Agreement immediately if Guest violates any terms. In such cases, no refunds will be issued and additional charges may apply.</p>
+      </section>
+
+      <section>
+        <h2>14. Governing Law</h2>
+        <p>This Agreement shall be governed by and interpreted in accordance with the laws of the State of Georgia.</p>
+      </section>
+
+      <section>
+        <h2>15. Agreement Acceptance</h2>
+        <p>By booking and/or occupying the property, Guest confirms that they have read, understood, and agreed to all terms of this Agreement.</p>
+      </section>
+
+      <div class="signature-box">
+        <div class="sig">
+          <strong>Host</strong>
+          <div class="sig-line">Gustavo / Date</div>
+        </div>
+        <div class="sig">
+          <strong>Guest</strong>
+          <div class="sig-line">Guest Name / Date</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p><strong>Belair Stay</strong></p>
+        <p>Committed to providing a clean, comfortable, and professionally managed guest experience.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
